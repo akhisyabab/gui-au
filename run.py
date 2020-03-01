@@ -18,13 +18,13 @@ def pres_down_up(line):
 
 # Function for text_editor
 def text_editor(tab):
-	text_editor_up = text_editor_position
-
-	pyautogui.moveTo(*tab)
-	click()
-	pyautogui.moveTo(*text_editor_up)
-	click()
-	pres_down_up(5)
+    text_editor_position = [1263, 128, 2]
+    text_editor_up = text_editor_position
+    pyautogui.moveTo(*tab)
+    click()
+    pyautogui.moveTo(*text_editor_up)
+    click()
+    pres_down_up(50)
 
 # Function for chrome
 def chrome(tab):
@@ -42,7 +42,10 @@ def chrome(tab):
 	click()
 	sites = [
 		'https://realpython.com/python-sockets/',
-		'https://stackoverflow.com/questions/23985531/certificate-verify-failed-oauth2'
+		'https://stackoverflow.com/questions/23985531/certificate-verify-failed-oauth2',
+		'https://requests-mock.readthedocs.io/en/latest/response.html',
+		'https://www.learndatasci.com/tutorials/python-pandas-tutorial-complete-introduction-for-beginners/',
+		'https://cloud.google.com/bigquery/docs/tutorials',
 	]
 	# Open tab
 	open_site(sites)
